@@ -1,36 +1,41 @@
 function game(){
-		let choiceArray = ["Paper","Rock","Scissors"];
-	let display = choiceArray[Math.floor(Math.random()*choiceArray.length)].toLowerCase();
-let userInput = prompt("What's your choice?").toLowerCase();
+	let playerScore = 0;
+	let computerScore = 0;
+	let moves = 0;
+};
 
-	function getCompChoice(){
-
-	return display;
+function playGame(){
+const rockBtn =	document.querySelector('.rock');
+const paperBtn = document.querySelector('.paper');
+const scissorBtn = document.querySelector('scissor');
+const playerOptions = [rockBtn, paperBtn, scissorBtn];
+const compOptions = ['rock', 'paper', 'scissor'];
 }
-function getPlayerChoice(){
-	
-	return userInput;
-}
-	
-	if (userInput == "paper" && display == "rock"){
-		console.log("You win! Paper beats rock");
-		
-			}
-else if (userInput == "rock" && display == "paper"){
-		console.log("You lose! Paper beats rock");
-	}
-	if (userInput == "paper" && display == "scissors"){
-		console.log("You lose! Scissors beats paper");
-	}
-else if (userInput == "scissor" && display == "paper") {
-		console.log("You win! Scissors beats paper");
-	}
-	if (userInput == "rock" && display == "scissor"){
-		console.log("You win! Rock beats scissor");
-	}
-else if (userInput == "scissor" && display == "rock"){
-		console.log("You lose! Rock beats scissor");
-	}
 
+playerOptions.forEach((option, i) => {
+	option.addEventListener('click',function(){
+
+		const movesLeft = document.querySelector('.movesleft');
+                moves++;
+                movesLeft.innerText = `Moves Left: ${10-moves}`;
+
+
+                const choiceNumber = Math.floor(Math.random()*3);
+                const computerChoice = computerOptions[choiceNumber];
+
+								 winner(this.innerText,computerChoice)
+
+								 if(moves == 10){
+								                     gameOver(playerOptions,movesLeft);
+								                 } 
 	}
-game();
+});
+
+if(moves == 10){
+                    gameOver(playerOptions,movesLeft);
+                }
+
+
+function gameOver(){
+
+}

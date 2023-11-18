@@ -1,0 +1,48 @@
+html{
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+
+}
+h1{
+  text-align: center;
+  background: wheat;
+  color: #3F0110;
+
+  padding:15px;
+
+
+}
+.rps{
+  display: flex;
+  flex: 1;
+  gap:20px;
+  padding: 30px;
+  margin:20px;
+  justify-content: center;
+  text-align: center;
+}
+.rock{
+border:none;
+}
+.rock:hover{
+  border:1px groove black;
+transform: scale(1.05);
+}
+.paper{
+  border: none;
+  }
+  .paper:hover{
+    border:1px groove black;
+  transform: scale(1.05);
+  }
+.scissor{
+  border: none; 
+}
+.scissor:hover{
+  border:1px groove black;
+transform: scale(1.05);
+}
+img{
+  width: 30%;
+}
